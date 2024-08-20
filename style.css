@@ -1,0 +1,136 @@
+body {
+  font-family: "Rochester", cursive;
+  background-color: #f4f4f4;
+  background-size: cover;
+  color: #555555;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #333333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+header h1 {
+ margin: 0; 
+  animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+main {
+  width: 80%;
+  margin: 20px auto;
+}
+.wstęp,
+.składniki,
+.instrukcja {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+}
+.składniki h2,
+.instrukcja h2, {
+  color: #333333;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 2em;
+}
+ul li,
+ol li {
+  margin-left: 20px;
+  font-size: 1.2em;
+}
+
+footer {
+  text-align: center;
+  background-color: #333333;
+  color: white;
+  padding: 20px 0;
+}
+footer form {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333333
+  }
+  footer form input[type="email"] {
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    color: #333333;
+}
+footer form input[type="email"],
+footer form label {
+  color: #333333; 
+}
+footer form input[type="submit"] {
+    background-color: #444444;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  footer form input[type="submit"]:hover {
+    background-color: #666666;
+  }
+.zdjęcie img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+social-icons a img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  .social-icons a img:hover {
+    filter: grayscale(0%);
+  }
+.zdjęcie img[src] {
+  opacity: 1;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+  .social-icons a:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  @media (min-width: 768px) {
+    main {
+      width: 70%;
+    }
+    header h1 {
+      font-size: 4em;
+    }
+  }

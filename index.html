@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyszna szarlotka</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Szarlotka</h1>
+    </header>
+    <main itemscope itemtype="https://schema.org/Recipe">
+      <section class="wstęp">
+        <p itemprop="description">
+          Podstawowy i najprostszy przepis na szarlotkę na kruchym cieście. To
+          bardzo szybka do zrobienia szarlotka, którą polecam każdemu. Poradzą z
+          nią sobie nawet osoby, które rzadziej pieką i gotują. Jest pyszna!
+        </p>
+      </section>
+      <section class="składniki">
+        <h2>Składniki</h2>
+        <h3>Jabłka:</h3>
+        <ul>
+          <li>1,5-2 kg jabłek (antonówka lub szara reneta)</li>
+          <li>3 łyżki cukru</li>
+          <li>Cukier waniliowy</li>
+          <li>1/2 łyżeczki cynamonu</li>
+        </ul>
+        <h3>Ciasto:</h3>
+        <ul>
+          <li>2 szklanki mąki</li>
+          <li>4 żółtka</li>
+          <li>2 łyżeczki proszku do pieczenia</li>
+          <li>Szczypta soli</li>
+          <li>180 g masła</li>
+          <li>Cukier waniliowy</li>
+          <li>0,5 szklanki cukru</li>
+          <li>2 łyżki bułki tartej</li>
+        </ul>
+        <h3>Do posypania:</h3>
+        <ul>
+          <li>Cukier puder</li>
+        </ul>
+      </section>
+    
+      <section class="instrukcja">
+        <h2>Instrukcja</h2>
+        <ol>
+          <li>
+            Jabłka obrać, a następnie zetrzeć na grubych oczkach. Włożyć jabłka do
+            szerokiego garnka lub na głęboką patelnię. Dodać cukier, cukier waniliowy, 
+            cynamon i smażyć przez około 20 minut, co chwilę mieszając, aż jabłka 
+            zmiękną.
+          </li>
+          <li>
+            Wszystkie składniki na ciasto zagnieść. Podzielić ciasto na pół i 
+            włożyć do lodówki.
+          </li>
+          <li>
+            Nagrzać piekarnik do 180°C (góra-dół). Wyłożyć blaszkę (24x36 cm) 
+            papierem do pieczenia.
+          </li>
+          <li>
+            Wylepić spód formy ciastem, nakłuć widelcem i włożyć do nagrzanego 
+            piekarnika. Podpiec spód przez około 15 minut, aż zacznie się rumienić, 
+            a następnie wyjąć z piekarnika.
+          </li>
+          <li>
+            Posypać podpieczony spód 2 łyżkami bułki tartej (wypije ewentualny sok 
+            z jabłek) i wyłożyć na to jabłka. Pozostałe ciasto zetrzeć na tarce 
+            bezpośrednio na jabłka.
+          </li>
+          <li>
+            Piec przez około 50 minut, aż ciasto uzyska złotobrązowy kolor. Po 
+            upieczeniu posypać cukrem pudrem.
+          </li>
+        </ol>
+      </section>
+      <section class="zdjęcie">
+        <img
+          srcset="zdjęcia/szarlotka_small.jpg 480w, zdjęcia/szarlotka.jpg 800w"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          src="zdjęcia/szarlotka.jpg"
+          alt="Pyszna szarlotka"
+        />
+      </section>
+    </main>
+    <footer>
+      <form action="submit_form.php" method="POST">
+        <label for="email">Zapisz się na newsletter:</label><br/>
+        <input type="email" id="email" name="email" required><br/>
+        <input type="submit" value="Zapisz się">
+      </form>
+      <address>
+        <p>© 2024 [Agnieszka Sak]. Wszelkie prawa zastrzeżone.</p>
+        <div class="social-icons">
+          <a href="#"
+            ><img src="https://cdn-icons-png.flaticon.com/256/733/733547.png"
+            alt="Facebook"></a
+          >
+          <a href="#"
+            ><img src="https://cdn-icons-png.flaticon.com/256/15713/15713420.png"
+            alt="Instagram"></a
+          >
+          <a href="#"
+            ><img src="https://cdn-icons-png.flaticon.com/256/3256/3256013.png"
+            alt="Twitter"></a
+          >
+        </div>
+      </address>
+    </footer>
+  </body>
+</html>
