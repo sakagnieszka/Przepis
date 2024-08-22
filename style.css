@@ -6,24 +6,72 @@ body {
   margin: 0;
   padding: 0;
 }
+.wstęp p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333333;
+}
+
 header {
   background-color: #333333;
   color: white;
   padding: 20px 0;
   text-align: center;
 }
+header hr {
+  border: none;
+  border-top: 1px solid #555555;
+  margin: 20px auto;
+  width: 80%;
+}
 header h1 {
- margin: 0; 
-  animation: fadeIn 2s ease-in-out;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 2s ease-in-out forwards;
+  font-size: 4em;
 }
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 main {
   width: 80%;
   margin: 20px auto;
+}
+h2 {
+  position: relative;
+  margin-bottom: 10px;
+  text-align: center;
+}
+h2 span {
+  opacity: 0;
+  display: inline-block;
+  animation: slideIn 1s forwards;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #555555;
+  margin-top: 10px;
 }
 .wstęp,
 .składniki,
@@ -33,10 +81,9 @@ main {
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  
 }
 .składniki h2,
-.instrukcja h2, {
+.instrukcja h2 {
   color: #333333;
   text-decoration: underline;
   margin-bottom: 15px;
@@ -51,47 +98,54 @@ ol li {
 
 footer {
   text-align: center;
-  background-color: #333333;
+  background-color: rgba(51, 51, 51, 0.9);
   color: white;
   padding: 20px 0;
 }
 footer form {
-    background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #333333
-  }
-  footer form input[type="email"] {
-    padding: 12px;
-    width: 100%;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-    color: #333333;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer form input[type="email"] {
+  padding: 12px;
+  width: calc(100% - 24px);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  color: #333333;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 footer form input[type="email"],
 footer form label {
-  color: #333333; 
+  color: #333333;
 }
 footer form input[type="submit"] {
-    background-color: #444444;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-  }
-  footer form input[type="submit"]:hover {
-    background-color: #666666;
-  }
+  background-color: #444444;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+footer form input[type="submit"]:hover {
+  background-color: #666666;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 .zdjęcie img {
   width: 100%;
   max-width: 400px;
@@ -101,36 +155,38 @@ footer form input[type="submit"] {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  transition: opacity 1s ease;
+  transform: scale(0.95);
+  transition: opacity 1s ease, transform 0.3s ease;
+}
+.zdjęcie img[src] {
+  opacity: 1;
+  transform: scale(1);
 }
 social-icons a img {
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-  }
-  .social-icons a img:hover {
-    filter: grayscale(0%);
-  }
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.social-icons a img:hover {
+  filter: grayscale(0%);
+}
 .zdjęcie img[src] {
   opacity: 1;
 }
 
 .social-icons a {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+.social-icons a:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+@media (min-width: 768px) {
+  main {
+    width: 70%;
   }
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-  }
-  .social-icons a:hover img {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
-  @media (min-width: 768px) {
-    main {
-      width: 70%;
-    }
-    header h1 {
-      font-size: 4em;
-    }
-  }
+}
