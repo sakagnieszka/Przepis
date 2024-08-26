@@ -147,6 +147,12 @@ footer form input[type="submit"]:hover {
   background-color: #666666;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+footer form input[type="email"]:focus {
+  border: 2px solid #555;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
 .zdjęcie img {
   width: 100%;
   max-width: 400px;
