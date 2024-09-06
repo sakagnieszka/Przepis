@@ -8,7 +8,10 @@
   </head>
   <body>
     <header>
-      <h1>Szarlotka</h1>
+      <div class="language-switcher">
+        <a href="?lang=pl">PL</a> | <a href="?lang=en">EN</a>
+      </div>
+      <h1 data-translate="title">Szarlotka</h1>
       <hr />
     </header>
     <main itemscope itemtype="https://schema.org/Recipe">
@@ -47,7 +50,7 @@
 
       <section class="instrukcja">
         <label for="liczbaPorcji">Liczba porcji:</label>
-  <input type="number" id="liczbaPorcji" min="1" value="1" />
+  <input type="number" id="liczbaPorcji" min="1" value="1" class="portion-input"  />
         <h2><span>Instrukcja</span></h2>
         <ol>
           <li>
@@ -82,9 +85,9 @@
       </section>
       <section class="zdjęcie">
         <img
-          srcset="zdjęcia/szarlotka_small.jpg 480w, zdjęcia/szarlotka.jpg 800w"
+          srcset="zdjecia/szarlotka_small.jpg 480w, zdjecia/szarlotka.jpg 800w"
           sizes="(max-width: 768px) 100vw, 50vw"
-          src="zdjęcia/szarlotka.jpg"
+          src="zdjecia/szarlotka.jpg"
           alt="Pyszna szarlotka"
         />
       </section>
@@ -96,7 +99,7 @@
         <input type="submit" value="Zapisz się" />
       </form>
       <address>
-        <p>© 2024 [Agnieszka Sak]. Wszelkie prawa zastrzeżone.</p>
+        <p data-translate="footer">© 2024 [Agnieszka Sak]. Wszelkie prawa zastrzeżone.</p>
         <div class="social-icons">
           <a href="#"
             ><img
